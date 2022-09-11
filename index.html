@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unofficial F1 Grid Penalty Calculator</title>
+
+    <!-- <link rel="stylesheet" href="pen.css"> -->
+    <script src="pen.js"></script>
+</head>
+
+<body onload='main()'>
+
+    <div style="width: 100%; display: table;">
+        <form method="post">
+            # Of Drivers: <input type="number" value="20" min="0" name="numDrivers" id="numDrivers"
+                oninput="qualiSize()" style="width: 6ch;" />
+            <div style="display: table-row">
+                <div id="input" style="display: table-cell; vertical-align: top;">
+
+                    <table id="inputTable">
+                        <caption>
+                            <h3 style="white-space: nowrap;">Qualifying order:</h3>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Driver</th>
+                                <th>Penalty</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inputTBody"></tbody>
+                    </table>
+                    <input type="submit" name="submit" value="Calculate" />
+                </div>
+                <div id="output" style="display: table-cell; vertical-align: top;">
+                    <table id="outputTable">
+                        <caption>
+                            <h3 style="white-space: nowrap;">Grid order:</h3>
+                        </caption>
+                        <thead>
+                            <tr></tr>
+                        </thead>
+                        <tbody id="outputTBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
